@@ -1,16 +1,21 @@
 class Pokemon:
-    def __init__(self, nome, vida, tipo,id):
+    def __init__(self, nome, vida, tipo, numeroId):
         self.nome=nome
-        self.nome=vida
-        self.nome=tipo
-        self.nome=id
+        self.vida=vida
+        self.tipo=tipo
+        self.numeroId=numeroId
 
     def getId(self):
-        return self.id
+        print(self.numeroId)
+        return self.numeroId
     
-    def setID(self):
-        newId=input('Digite o novo ID:' )
-        return self.id
+    def setID(self,newId):
+        self.numeroId=newId
+        print("novo id:", newId)
+        return self.numeroId
     
     def showName(self):
-        print("meu nome é:" )
+        print("meu nome é:", self.nome)
+
+    def showType(self):
+        print("Sou do tipo:", self.tipo)
